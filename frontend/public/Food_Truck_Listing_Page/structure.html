@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Trucks Near You</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .filters { margin-bottom: 20px; }
+    .food-truck { display: flex; margin-bottom: 20px; }
+    .food-truck img { width: 100px; height: 100px; margin-right: 15px; }
+    .pagination { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Find Food Trucks Near You</h1>
+
+  <!-- Filtering Options -->
+  <div class="filters">
+    <label for="cuisine">Cuisine:</label>
+    <select id="cuisine">
+      <option value="all">All</option>
+      <option value="streetfood">Streetfood</option>
+      <option value="soulfood">Soulfood</option>
+    </select>
+
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option value="distance">Distance</option>
+      <option value="rating">Rating</option>
+    </select>
+  </div>
+
+  <!-- Food Truck List -->
+  <div id="food-truck-list"></div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <button id="prev-page">Previous</button>
+    <span id="page-info">Page 1 of 5</span>
+    <button id="next-page">Next</button>
+  </div>
+
+  <script>
+    // Sample data
+    const foodTrucks = [
+      { name: "Kgotso Bites", cuisine: "Streetfood", distance: 0.5, rating: 4.5, image: "#image.jpg" },
+      { name: "Sams Kitchen", cuisine: "Soulfood", distance: 1.2, rating: 4.2, image: "#image.jpg" }
+    ];
+
+    let currentPage = 1;
+    const itemsPerPage = 5;
+
+    // Render food trucks
+    function renderFoodTrucks(trucks) {
+      const list = document.getElementById('food-truck-list');
+      list.innerHTML = trucks.map(truck => `
+        <div class="food-truck">
+          <img src="${truck.image}" alt="${truck.name}">
+          <div>
+            <h2>${truck.name}</h2>
+            <p>Cuisine: ${truck.cuisine}</p>
+            <p>Distance: ${truck.distance} miles</p>
+            <p>Rating: ${truck.rating} ★</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Filter by cuisine
+    function filterByCuisine(trucks, cuisine) {
+      return cuisine === 'all' ? trucks : trucks.filter(truck => truck.cuisine === cuisine);
+    }
+
+    // Sort by distance or rating
+    function sortTrucks(trucks, sortBy) {
+      return sortBy === 'distance'
+        ? trucks.sort((a, b) => a.distance - b.distance)
+        : trucks.sort((a, b) => b.rating - a.rating);
+    }
+
+    // Update pagination
+    function updatePagination() {
+      document.getElementById('page-info').textContent = `Page ${currentPage} of ${Math.ceil(foodTrucks.length / itemsPerPage)}`;
+    }
+
+    // Event listeners
+    document.getElementById('cuisine').addEventListener('change', () => {
+      const cuisine = document.getElementById('cuisine').value;
+      const filteredTrucks = filterByCuisine(foodTrucks, cuisine);
+      renderFoodTrucks(filteredTrucks);
+    });
+
+    document.getElementById('sort').addEventListener('change', () => {
+      const sortBy = document.getElementById('sort').value;
+      const sortedTrucks = sortTrucks(foodTrucks, sortBy);
+      renderFoodTrucks(sortedTrucks);
+    });
+
+    document.getElementById('prev-page').addEventListener('click', () => {
+      if (currentPage > 1) currentPage--;
+      updatePagination();
+    });
+
+    document.getElementById('next-page').addEventListener('click', () => {
+      if (currentPage < Math.ceil(foodTrucks.length / itemsPerPage)) currentPage++;
+      updatePagination();
+    });
+
+    // Initial render
+    renderFoodTrucks(foodTrucks);
+    updatePagination();
+  </script>
+</body>
+</html>
