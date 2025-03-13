@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 .homepage {
     display: flex;
     flex-direction: column;
@@ -9,8 +14,8 @@
     background-repeat: no-repeat; /* Corrected typo */
     background-position: center; /* added center */
     position: relative;
-    min-height: 100vh;
     width: 100%;
+    min-height: 100vh;
 }
 
 /* Add an overlay for better text readability */
@@ -38,5 +43,8 @@
 }
 
 .featured-trucks-section {
-    margin-bottom: 20px;
+    margin-bottom: 500px;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1; /* Added z-index value */
 }
