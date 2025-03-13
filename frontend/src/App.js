@@ -1,16 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Homepage from './components/Homepage';
-import SearchBar from './components/SearchBar';
-import FeaturedTrucks from './components/FeaturedTrucks';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
   return (
     <div>
-      <Homepage />
-      <SearchBar />
-      <FeaturedTrucks />
+      <Header />
+      <main className="main-content">
+        <Homepage />
+      </main>
       <Footer />
     </div>
   );

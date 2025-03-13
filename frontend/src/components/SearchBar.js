@@ -1,9 +1,9 @@
 import React from 'react';
+import './SearchBar.css';
 
 function SearchBar() {
   return (
-    <div>
-      {/* Search bar content will go here */}
+    <div className="search-bar">
       <input type="text" placeholder="Search for food trucks..." />
       <button>Search</button>
     </div>
