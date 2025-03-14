@@ -1,6 +1,6 @@
 .hero {
   background-color: transparent; /* transparent background */
-  padding: 20px 20px;
+  padding: 0px 0px;
   text-align: center;
   width: 100%;
 }
@@ -14,9 +14,10 @@
 .hero h1 {
   font-size: 40px; /* Larger font size for the heading */
   margin-bottom: 20px; /* Spacing below the heading */
+  color: #ffffff;
 }
 
 .hero p {
   font-size: 16px; /* Slightly larger paragraph text */
-  color: #000000; /* Dark grey text colour */
+  color: #ffffff;
 }
