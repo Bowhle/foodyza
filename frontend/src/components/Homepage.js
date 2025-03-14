@@ -2,10 +2,10 @@ import React from 'react';
 import Hero from './Hero';
 import SearchBar from './SearchBar';
 import FeaturedTrucks from './FeaturedTrucks';
-import Footer from './Footer'; // Import Footer
+import Footer from './Footer';
 import './Homepage.css';
 
-function Homepage() {
+ function Homepage() {
   return (
     <div className="homepage">
       <div className="main-content">
@@ -16,7 +16,6 @@ function Homepage() {
         <div className="featured-trucks-section">
           <FeaturedTrucks />
         </div>
-        {/* Will add more sections as needed */}
       </div>
       <Footer />
     </div>
