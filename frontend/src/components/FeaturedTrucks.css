@@ -1,0 +1,24 @@
+.featured-trucks-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: transparent; /* Optional background */
+}
+
+.trucks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.truck-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.truck-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

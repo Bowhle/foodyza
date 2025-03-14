@@ -7,18 +7,15 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    /* Background image */
     background-image: url('../assets/homepage-background.jpg');
     background-size: cover;
-    background-repeat: no-repeat; /* Corrected typo */
-    background-position: center; /* added center */
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     width: 100%;
     min-height: 100vh;
 }
 
-/* Add an overlay for better text readability */
 .homepage::before {
     content: '';
     position: absolute;
@@ -26,25 +23,25 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75); /* Corrected typo */
+    background-color: rgba(0, 0, 0, 0.75);
     z-index: -1;
 }
 
 .main-content {
-  text-align: center;
-  width: 80%; /* Adjusted width */
-  margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .search-section {
     margin-bottom: 60px;
     position: relative;
-    z-index: 1; /* Added z-index value */
+    z-index: 1;
 }
 
 .featured-trucks-section {
-    margin-bottom: 500px;
+    margin-top: 40px; /* Change to top margin */
     padding-top: 40px;
     position: relative;
-    z-index: 1; /* Added z-index value */
+    z-index: 1;
 }
