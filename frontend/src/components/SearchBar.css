@@ -1,0 +1,30 @@
+.search-bar {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align items */
+  margin-bottom: 40px; /* Add some space below the search bar */
+  position: relative; /* Needed to position elements within */
+  z-index: 1; /* Ensures search bar is above overlay */
+}
+
+.search-bar input[type="text"] {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 800px; /* Adjust width as needed */
+  margin-right: 10px; /* Add space between input and button */
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #000000; /* Use your brand colour */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #f0a010; /* Darker shade on hover */
+}

@@ -1,0 +1,15 @@
+.map-search {
+  /* Styles for the map search area */
+}
+
+.map-container {
+  /* Styles for the map container */
+  height: 300px; /* Set a height for the map */
+  background-color: #eee; /* Placeholder background */
+}
+
+.area-labels {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}

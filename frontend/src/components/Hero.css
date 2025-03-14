@@ -1,0 +1,21 @@
+.hero {
+  background-color: transparent; /* transparent background */
+  padding: 20px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 100%; /* Limit the content width */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.hero h1 {
+  font-size: 40px; /* Larger font size for the heading */
+  margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.hero p {
+  font-size: 16px; /* Slightly larger paragraph text */
+  color: #000000; /* Dark grey text colour */
+}
