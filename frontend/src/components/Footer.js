@@ -1,11 +1,12 @@
 import React from 'react';
+import './footer.css';
 
 function Footer() {
   return (
-    <div>
+    <footer>
       {/* Footer content will go here */}
       <p>&copy; 2024 Foodyza</p>
-    </div>
+    </footer>
   );
 }
 

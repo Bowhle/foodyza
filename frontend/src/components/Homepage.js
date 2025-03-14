@@ -2,12 +2,13 @@ import React from 'react';
 import Hero from './Hero';
 import SearchBar from './SearchBar';
 import FeaturedTrucks from './FeaturedTrucks';
+import Footer from './Footer'; // Import Footer
 import './Homepage.css';
 
 function Homepage() {
   return (
     <div className="homepage">
-      <div className="main-content"> {/* Add this container */}
+      <div className="main-content">
         <div className="search-section">
           <Hero />
           <SearchBar />
@@ -17,6 +18,7 @@ function Homepage() {
         </div>
         {/* Will add more sections as needed */}
       </div>
+      <Footer />
     </div>
   );
 }

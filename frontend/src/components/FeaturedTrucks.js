@@ -1,23 +1,25 @@
 import React from 'react';
 import './FeaturedTrucks.css';
+import kwamamzoImage from '../assets/kwamamzo.gif';
+import kcgrillImage from '../assets/kcgrill.jpg';
 
 const FeaturedTrucks = () => {
   const featuredTrucks = [
     {
       id: 1,
       name: 'KwaMamzo',
-      image: '/assets/kwamamzo.jpg', // Replace with your image
+      image: kwamamzoImage, // Replace image
       cuisine: 'Kasi style kota',
       rating: 4.5,
     },
     {
       id: 2,
       name: 'KCs Grill',
-      image: '/assets/kc-grill.jpg', // Replace with your image
+      image: kcgrillImage, // Replace image
       cuisine: 'pap&steak',
       rating: 4.8,
     },
-    // Add more trucks as needed
+    // Will add more trucks as needed
   ];
 
   return (
@@ -30,6 +32,9 @@ const FeaturedTrucks = () => {
             <h3>{truck.name}</h3>
             <p>Cuisine: {truck.cuisine}</p>
             <p>Rating: {truck.rating}</p>
+            <button className="explore-button">
+            EXPLORE
+            </button>
           </div>
         ))}
       </div>
