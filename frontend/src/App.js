@@ -1,18 +1,23 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import FoodTrucks from './components/FoodTrucks';
+import Cuisine from './components/Cuisine';
+import Area from './components/Area';
+import Layout from './components/Layout';
 
 function App() {
   return (
-    <div>
-      <Header />
-      <main className="main-content">
-        <Homepage />
-      </main>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Layout> {/* Use Layout to wrap content */}
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/foodtrucks" element={<FoodTrucks />} />
+          <Route path="/cuisine" element={<Cuisine />} />
+          <Route path="/area" element={<Area />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

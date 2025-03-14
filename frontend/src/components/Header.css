@@ -1,23 +1,70 @@
 .header {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 90px;
+  padding: 20px 40px;
   background-color: #FCB121;
 }
 
 .logo {
-  margin: 10px;
-  height: 20px;
   display: block;
-  width: auto;
-  aspect-ratio: auto 110 / 20;
-  padding-top: 0px;
+  margin: 10px;
+  margin-left: 20px;
+  max-height: 20px;
+  max-width: 100px;
   padding-bottom: 20px;
+  flex-grow: 1;
 }
 
-.nav {
-  /* Add styles for navigation links */
+.header-nav {
+  display: inline-block; /* Displays nav in a line */
+  margin-right: 40px;
+  margin-left: 0px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-right: 15px; /* Space between links */
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  color: #333 /* Change color on hover */
+}
+
+@media (min-width: 769px) { /* nav on desktop */
+  .header-nav {
+    display: block; /* Show navigation on desktop */
+  }
+}
+
+@media (max-width: 768px) { /* nav on mobile */
+.header-nav,
+.header-buttons {
+  display: none; /* Hide navigation menu on mobile*/
+  }
+
+.header-nav.show {
+    display: block; /* Show dropdown content */
+    position: absolute;
+    top: 100%; /* Adjust as needed */
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .header-nav.show a {
+    display: block;
+    margin: 10px 0;
+  }
 }
 
 .header-buttons {
