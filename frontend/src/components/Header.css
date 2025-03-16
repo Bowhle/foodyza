@@ -93,9 +93,9 @@
 }
 
 .login-button {
-  background-color: #fff;
+  background-color: transparent;
   color: #000;
-  border: 1px solid #000;
+  border: none;
   padding: 8px 16px;
   border-radius: 5px;
   margin-right: 10px;
@@ -103,8 +103,8 @@
 }
 
 .signup-button {
-  background-color: #000;
-  color: #fff;
+  background-color: #FFF2DB;
+  color: #000;
   border: none;
   padding: 8px 16px;
   border-radius: 5px;
@@ -113,5 +113,6 @@
 
 .login-button:hover,
 .signup-button:hover {
-  background-color: #00879E;
+  background-color: #000;
+  color: #fff
 }
