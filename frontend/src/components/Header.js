@@ -14,11 +14,46 @@ function Header() {
 
   return (
     <header className="header">
-      <button className="BurgerIcon" onClick={toggleDropdown} aria-label="Main navigation menu">
-        Burger
+       <button
+        className="BurgerIcon"
+        onClick={toggleDropdown}
+        aria-label="Main navigation menu"
+        aria-expanded={isDropdownOpen}
+        aria-controls="header-nav"
+      >
+        {/* SVG Hamburger Icon */}
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.5 5H17.5"
+            stroke="black"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2.5 10H17.5"
+            stroke="black"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2.5 15H17.5"
+            stroke="black"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </button>
       <div className="logo">
-        <Link to="http://localhost:3000/"> {/* Wrap logo in Link */}
+        <Link to="/"> {/* Wrap logo in Link */}
           <img src={foodyzaLogo} alt="Foodyza Logo" />
         </Link>
       </div>
