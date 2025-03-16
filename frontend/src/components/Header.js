@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
 import './Header.css';
 import foodyzaLogo from '../assets/foodyzaLogo.svg';
 

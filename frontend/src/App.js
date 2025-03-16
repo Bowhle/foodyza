@@ -9,14 +9,12 @@ import Layout from './components/Layout';
 function App() {
   return (
     <BrowserRouter>
-      <Layout> {/* Use Layout to wrap content */}
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/foodtrucks" element={<FoodTrucks />} />
-          <Route path="/cuisine" element={<Cuisine />} />
-          <Route path="/area" element={<Area />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/" element={<Layout><Homepage /></Layout>} />
+        <Route path="/foodtrucks" element={<Layout><FoodTrucks /></Layout>} />
+        <Route path="/cuisine" element={<Layout><Cuisine /></Layout>} />
+        <Route path="/area" element={<Layout><Area /></Layout>} />
+      </Routes>
     </BrowserRouter>
   );
 }
