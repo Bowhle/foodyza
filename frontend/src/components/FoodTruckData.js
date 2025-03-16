@@ -60,7 +60,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
-    rating: 4.2,
+    rating: 3.1,
   },
   {
     id: 10,

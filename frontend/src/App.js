@@ -5,6 +5,7 @@ import FoodTrucks from './components/FoodTrucksPage';
 import Cuisine from './components/CuisinePage';
 import Area from './components/AreaPage';
 import Layout from './components/Layout';
+import UserLoginSignup from './components/UserLoginSignup'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/foodtrucks" element={<Layout><FoodTrucks /></Layout>} />
         <Route path="/cuisine" element={<Layout><Cuisine /></Layout>} />
         <Route path="/area" element={<Layout><Area /></Layout>} />
+        <Route path="/user-login-signup" element={<Layout><UserLoginSignup /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
