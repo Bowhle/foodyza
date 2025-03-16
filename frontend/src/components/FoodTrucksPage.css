@@ -1,0 +1,30 @@
+.food-trucks-container {
+  padding: 20px;
+}
+
+.food-truck-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .food-truck-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on mobile */
+  }
+}
+
+.food-truck-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.food-truck-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.star-rating .filled {
+  color: gold;
+}

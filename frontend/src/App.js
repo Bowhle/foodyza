@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
-import FoodTrucks from './components/FoodTrucks';
-import Cuisine from './components/Cuisine';
-import Area from './components/Area';
+import FoodTrucks from './components/FoodTrucksPage';
+import Cuisine from './components/CuisinePage';
+import Area from './components/AreaPage';
 import Layout from './components/Layout';
 
 function App() {
