@@ -1,0 +1,11 @@
+.cuisine-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+
+.cuisine-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}

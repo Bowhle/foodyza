@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from './Header';
 import './UserLoginSignup.css';
 
 function UserLoginSignup() {
   return (
     <div>
-      <Header />
       <div className="login-signup-container">
         <h2>A Big Title</h2>
         <input type="text" placeholder="Enter email or phone number" />

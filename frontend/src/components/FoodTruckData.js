@@ -3,7 +3,8 @@ const foodTruckData = [
     id: 1,
     title: 'The Burger Joint',
     description: 'Delicious burgers and fries.',
-    imageUrl: 'placeholder-image.jpg', // Replace with actual image URL
+    imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Shisa Nyama',
     rating: 4.5,
   },
   {
@@ -11,6 +12,7 @@ const foodTruckData = [
     title: 'Taco Time',
     description: 'Authentic Mexican tacos.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Beef Stew',
     rating: 3.8,
   },
   {
@@ -18,6 +20,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Beef Stew',
     rating: 4.2,
   },
   {
@@ -25,6 +28,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Smileys',
     rating: 4.2,
   },
   {
@@ -32,6 +36,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Kota',
     rating: 4.2,
   },
   {
@@ -39,6 +44,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Bunny Chow',
     rating: 4.2,
   },
   {
@@ -46,6 +52,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Pap',
     rating: 4.2,
   },
   {
@@ -53,6 +60,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Boere Rolls',
     rating: 4.2,
   },
   {
@@ -60,6 +68,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Beef Stew',
     rating: 3.1,
   },
   {
@@ -67,6 +76,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Beef Stew',
     rating: 4.2,
   },
   {
@@ -74,6 +84,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Mala',
     rating: 4.2,
   },
   {
@@ -81,6 +92,7 @@ const foodTruckData = [
     title: 'Pizza Palace',
     description: 'Wood-fired pizzas.',
     imageUrl: 'placeholder-image.jpg',
+    cuisineType: 'Mala',
     rating: 4.2,
   },
   // ... more food trucks

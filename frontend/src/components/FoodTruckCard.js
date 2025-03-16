@@ -9,6 +9,7 @@ function FoodTruckCard({ truck }) {
       <h3>{truck.title}</h3>
       <p>{truck.description}</p>
       <StarRating rating={truck.rating} />
+      <button className="explore-button"> EXPLORE</button>
     </div>
   );
 }

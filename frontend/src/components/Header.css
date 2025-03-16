@@ -6,7 +6,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #FCB121;
+  background-color: #FFAB5B;
+  width: auto;
 }
 
 .BurgerIcon {
@@ -112,5 +113,5 @@
 
 .login-button:hover,
 .signup-button:hover {
-  opacity: 0.8;
+  background-color: #00879E;
 }

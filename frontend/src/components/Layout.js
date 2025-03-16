@@ -4,7 +4,7 @@ import Header from './Header';
 function Layout({ children }) {
   return (
     <div>
-      <Header />
+    <Header />
       <main style={{ minHeight: '100vh', overflowY: 'auto' }}>
         {children}
       </main>
