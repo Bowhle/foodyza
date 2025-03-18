@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Truck Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Food Truck Name</h1>
+    <p class="cuisine">Add name</p>
+    <p class="description">Add description</p>
+  </header>
+
+  <main>
+    <div class="left-column">
+      <h2>Menu</h2>
+      <div class="menu-item">
+        <h3>Food item - price</h3>
+        <img src="foodimg.jpg" alt="food name">
+      </div>
+      <div class="menu-item">
+        <h3>Food item - price</h3>
+        <img src="foodimh.jpg" alt="food name">
+      </div>
+      <!-- Add more menu items as needed -->
+    </div>
+
+    <div class="right-column">
+      <h2>Location</h2>
+      <div id="map">
+        <!-- Embed Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <h2>Contact</h2>
+      <p>Phone: foodtruck number</p>
+      <p>Email: foodtruck email</p>
+
+      <h2>Reviews</h2>
+      <div id="reviews-list">
+        <!-- Reviews will be dynamically added here -->
+      </div>
+
+      <h2>Add Your Review</h2>
+      <form id="review-form">
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="5">★★★★★</option>
+          <option value="4">★★★★☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <label for="review-text">Review:</label>
+        <textarea id="review-text" name="review-text" rows="4" required></textarea>
+
+        <label for="reviewer-name">Your Name:</label>
+        <input type="text" id="reviewer-name" name="reviewer-name" required>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <button id="favorite-btn">❤️ Add to Favorites</button>
+    <div class="social-media">
+      <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+      <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
