@@ -64,9 +64,6 @@ function Header() {
         <Link to="/cuisine" className="nav-link">
           CUISINE
         </Link>
-        <Link to="/area" className="nav-link">
-          AREA
-        </Link>
       </nav>
       <div className="header-buttons">
         <a href="/user-login-signup">

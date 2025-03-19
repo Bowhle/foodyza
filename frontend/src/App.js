@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './components/Homepage';
 import FoodTrucks from './components/FoodTrucksPage';
 import Cuisine from './components/CuisinePage';
-import Area from './components/AreaPage';
 import Layout from './components/Layout';
-import UserLoginSignup from './components/UserLoginSignup'
+import UserLoginSignup from './components/UserLoginSignup';
+import FoodTruckDetails from './components/FoodTruck-Details/FoodTruckDetails';
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <Route path="/" element={<Layout><Homepage /></Layout>} />
         <Route path="/foodtrucks" element={<Layout><FoodTrucks /></Layout>} />
         <Route path="/cuisine" element={<Layout><Cuisine /></Layout>} />
-        <Route path="/area" element={<Layout><Area /></Layout>} />
         <Route path="/user-login-signup" element={<Layout><UserLoginSignup /></Layout>} />
+        <Route path="/food-truck/:id" element={<Layout><FoodTruckDetails /></Layout>} />
       </Routes>
     </BrowserRouter>
   );

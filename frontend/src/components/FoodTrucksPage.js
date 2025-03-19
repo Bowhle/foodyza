@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import FoodTruckCard from './FoodTruckCard';
 import foodTruckData from './FoodTruckData';
@@ -7,6 +8,7 @@ import './FoodTrucksPage.css';
 
 function FoodTrucks() {
   const [searchTerm, setSearchTerm] = useState('');
+  console.log("Food Truck Data:", foodTruckData)
 
   const filteredTrucks = foodTruckData.filter((truck) => {
     if (Array.isArray(truck.cuisineType)) {
@@ -14,7 +16,7 @@ function FoodTrucks() {
         cuisine.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-    return false; // Handle cases where cuisineType is not an array
+    return false;
   });
 
   const rows = [];
@@ -35,21 +37,27 @@ function FoodTrucks() {
           />
           <button>Search</button>
         </div>
-        {/* // <h1>A Big Title</h1> */}
         <div className="food-truck-grid">
           {rows.slice(0, 2).map((row, rowIndex) => (
             <div key={rowIndex} className="food-truck-row">
               {row.map((truck) => {
                 const imageUrl = FoodTruckImageData[`truck${truck.id}`];
+                console.log("Truck ID:", truck.id);
 
                 return (
-                  <FoodTruckCard key={truck.id} truck={{ ...truck, imageUrl }} />
+                  <FoodTruckCard
+                    key={truck.id}
+                    truck={{ ...truck, imageUrl }}
+                  >
+                    <Link to={`/food-truck/${truck.id}`}>
+                      <button className="explore-button">EXPLORE</button>
+                    </Link>
+                  </FoodTruckCard>
                 );
               })}
             </div>
           ))}
         </div>
-        {/* // <h1>A Big Title</h1> */}
         <div className="food-truck-grid">
           {rows.slice(2, 4).map((row, rowIndex) => (
             <div key={rowIndex} className="food-truck-row">
@@ -57,7 +65,14 @@ function FoodTrucks() {
                 const imageUrl = FoodTruckImageData[`truck${truck.id}`];
 
                 return (
-                  <FoodTruckCard key={truck.id} truck={{ ...truck, imageUrl }} />
+                  <FoodTruckCard
+                    key={truck.id}
+                    truck={{ ...truck, imageUrl }}
+                  >
+                    <Link to={`/food-truck/${truck.id}`}>
+                      <button className="explore-button">EXPLORE</button>
+                    </Link>
+                  </FoodTruckCard>
                 );
               })}
             </div>
