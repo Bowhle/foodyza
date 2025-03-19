@@ -1,5 +1,6 @@
 import React from 'react';
 import './FeaturedTrucks.css';
+import StarRating from './StarRating';
 import kwamamzoImage from '../assets/kwamamzo.gif';
 import kcgrillImage from '../assets/kcgrill.jpg';
 
@@ -8,18 +9,24 @@ const FeaturedTrucks = () => {
     {
       id: 1,
       name: 'KwaMamzo',
-      image: kwamamzoImage, // Replace image
-      cuisine: 'Kasi style kota',
-      rating: 4.5,
+      image: kwamamzoImage,
+      cuisine: 'Kasi style kota, Chips, Fish & Chips',
+      rating: 4.1,
     },
     {
       id: 2,
-      name: 'KCs Grill',
-      image: kcgrillImage, // Replace image
-      cuisine: 'pap&steak',
+      name: 'Kumbis Grill',
+      image: kcgrillImage,
+      cuisine: 'African, Shisa Nyama, Vegetables',
       rating: 4.8,
     },
-    // Will add more trucks as needed
+    {
+      id: 3,
+      name: 'Sehles Kitchen',
+      image: kcgrillImage, // Replace image
+      cuisine: 'African, Chips, Light Meals, Comfort Food',
+      rating: 5.0,
+    },
   ];
 
   return (
@@ -32,6 +39,7 @@ const FeaturedTrucks = () => {
             <h3>{truck.name}</h3>
             <p>Cuisine: {truck.cuisine}</p>
             <p>Rating: {truck.rating}</p>
+            <StarRating rating={truck.rating} />
             <button className="explore-button">
             EXPLORE
             </button>

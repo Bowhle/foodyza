@@ -8,4 +8,19 @@
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.explore-button {
+    background-color: #062844;
+    width: 80%;
+    color: #fff;
+    padding: 5px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.explore-button:hover {
+    background-color: #03172F;
 }

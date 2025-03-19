@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Layout from './Layout';
 import CuisineCard from './CuisineCard';
-import cuisineData from './cuisineData';
+import CuisineData from './CuisineData';
 import './CuisinePage.css';
 
 function Cuisine() {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredCuisines = cuisineData.filter((cuisine) =>
+  const filteredCuisines = CuisineData.filter((cuisine) =>
     cuisine.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
