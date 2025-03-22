@@ -6,6 +6,8 @@ import Cuisine from './components/CuisinePage';
 import Layout from './components/Layout';
 import UserLoginSignup from './components/UserLoginSignup';
 import FoodTruckDetails from './components/FoodTruck-Details/FoodTruckDetails';
+import Cart from './components/Cart-Page/Cart';
+import Checkout from './components/Checkout-Page/Checkout';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/cuisine" element={<Layout><Cuisine /></Layout>} />
         <Route path="/user-login-signup" element={<Layout><UserLoginSignup /></Layout>} />
         <Route path="/food-truck-details/:id" element={<Layout><FoodTruckDetails /></Layout>} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

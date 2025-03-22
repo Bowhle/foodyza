@@ -27,6 +27,13 @@ const FeaturedTrucks = () => {
       cuisine: 'African, Chips, Light Meals, Comfort Food',
       rating: 5.0,
     },
+    {
+      id: 4,
+      name: 'Franks Grill',
+      image: kcgrillImage, // Replace image
+      cuisine: 'African, Chips, Light Meals, Comfort Food',
+      rating: 5.0,
+    },
   ];
 
   return (

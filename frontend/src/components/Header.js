@@ -1,27 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import foodyzaLogo from '../assets/foodyzaLogo.svg';
+import { ShoppingCart } from 'lucide-react';
 
 function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(0);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    console.log(isDropdownOpen);
-    console.log("toggle clicked");
   };
+
+  const fetchCartItems = async (): Promise<{ id: number; title: string; price: string; quantity: number; image: string }[]> => {
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+      return JSON.parse(storedCart);
+    }
+    return [];
+  };
+
+  useEffect(() => {
+    const updateCart = async () => {
+      const cartItems = await fetchCartItems();
+      setCartItemCount(cartItems.reduce((total, item) => total + item.quantity, 0));
+    };
+    updateCart();
+  }, []);
 
   return (
     <header className="header">
-       <button
+      <button
         className="BurgerIcon"
         onClick={toggleDropdown}
         aria-label="Main navigation menu"
         aria-expanded={isDropdownOpen}
         aria-controls="header-nav"
       >
-        {/* SVG Hamburger Icon */}
         <svg
           width="20"
           height="20"
@@ -53,7 +68,7 @@ function Header() {
         </svg>
       </button>
       <div className="logo">
-        <Link to="/"> {/* Wrap logo in Link */}
+        <Link to="/">
           <img src={foodyzaLogo} alt="Foodyza Logo" />
         </Link>
       </div>
@@ -66,6 +81,10 @@ function Header() {
         </Link>
       </nav>
       <div className="header-buttons">
+        <Link to="/cart" className="cart-link"> {/* Corrected to /cart */}
+          <ShoppingCart className="cart-icon" />
+          {cartItemCount > 0 && <span className="cart-count">{cartItemCount}</span>}
+        </Link>
         <a href="/user-login-signup">
           <button className="login-button">Login</button>
         </a>
