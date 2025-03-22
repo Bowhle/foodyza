@@ -26,9 +26,11 @@
 }
 
 .food-truck-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .food-truck-row {
@@ -59,10 +61,10 @@
 }
 
 .explore-button {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border: none;
+  background-color: #062844;
+  width: 100%;
+  color: #fff;
+  padding: 5px 40px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;

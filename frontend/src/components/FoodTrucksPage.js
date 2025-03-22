@@ -49,7 +49,7 @@ function FoodTrucks() {
                     key={truck.id}
                     truck={{ ...truck, imageUrl }}
                   >
-                    <Link to={`/food-truck/${truck.id}`}>
+                    <Link to={`/food-truck-details/${truck.id}`}>
                       <button className="explore-button">EXPLORE</button>
                     </Link>
                   </FoodTruckCard>
@@ -69,7 +69,7 @@ function FoodTrucks() {
                     key={truck.id}
                     truck={{ ...truck, imageUrl }}
                   >
-                    <Link to={`/food-truck/${truck.id}`}>
+                    <Link to={`/food-truck-details/${truck.id}`}>
                       <button className="explore-button">EXPLORE</button>
                     </Link>
                   </FoodTruckCard>

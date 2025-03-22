@@ -15,7 +15,7 @@ function App() {
         <Route path="/foodtrucks" element={<Layout><FoodTrucks /></Layout>} />
         <Route path="/cuisine" element={<Layout><Cuisine /></Layout>} />
         <Route path="/user-login-signup" element={<Layout><UserLoginSignup /></Layout>} />
-        <Route path="/food-truck/:id" element={<Layout><FoodTruckDetails /></Layout>} />
+        <Route path="/food-truck-details/:id" element={<Layout><FoodTruckDetails /></Layout>} />
       </Routes>
     </BrowserRouter>
   );

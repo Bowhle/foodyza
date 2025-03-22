@@ -3,3 +3,30 @@
   height: 200px;
   object-fit: cover;
 }
+
+.explore-button {
+  background-color: #062844;
+  width: 100%;
+  color: #fff;
+  padding: 5px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.explore-button:hover {
+  opacity: 0.8;
+}
+
+/* Override default <a> styles */
+.food-truck-card a {
+  color: white; /* Inherit color from button */
+  background-color: #062844; /* Inherit background from button */
+  padding: 5px 40px;
+  width: 50;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  text-align: center;
+  display: inline-block;
+}
