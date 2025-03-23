@@ -1,0 +1,104 @@
+.checkout-form-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .form-container {
+    grid-column: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Added border radius for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  }
+  
+  .order-summary {
+    grid-column: 2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Added border radius for a softer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; /* Make labels bold */
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px; /* Increased padding for better touch targets */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+  }
+  
+  .cart-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px; /* Increased margin for spacing */
+    border-radius: 4px; /* Added border radius to images */
+  }
+  
+  .cart-item-details span {
+    display: block;
+    margin-bottom: 5px; /* Added margin for spacing between details */
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right; /* Align total to the right */
+  }
+  
+  .place-order-button {
+    display: block; /* Make it a block element to take full width */
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px; /* Increased padding */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em; /* Increased font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .place-order-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .checkout-form-page {
+      grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+  
+    .form-container,
+    .order-summary {
+      grid-column: 1; /* Make them span the full width */
+    }
+  }

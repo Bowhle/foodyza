@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Cart.css'; // Create a Cart.css file for styling
+import CheckoutForm from '../Checkout-Form/CheckoutForm';
+import './Cart.css';
 
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -28,9 +29,9 @@ const Cart = () => {
               <li key={item.id} className="cart-item">
                 <img src={item.image} alt={item.title} className="cart-item-image" />
                 <div className="cart-item-details">
-                  <h3>{item.title}</h3>
-                  <p>Price: {item.price}</p>
-                  <p>Quantity: {item.quantity}</p>
+                  <span>{item.title}</span>
+                  <span>Quantity: {item.quantity}</span>
+                  <span>Price: {item.price}</span>
                 </div>
               </li>
             ))}
@@ -38,11 +39,11 @@ const Cart = () => {
           <div className="cart-total">
             Total: R{calculateTotal()}
           </div>
-          <Link to="/checkout" className="checkout-button">
-            GO TO CHECKOUT
-          </Link>
         </>
       )}
+      <Link to="/checkout-form" className="checkout-button">
+        GO TO CHECKOUT
+      </Link>
     </div>
   );
 };
