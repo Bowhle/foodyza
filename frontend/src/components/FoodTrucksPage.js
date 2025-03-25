@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Layout from './Layout';
 import FoodTruckCard from './FoodTruckCard';
 import foodTruckData from './FoodTruckData';
@@ -8,22 +8,31 @@ import './FoodTrucksPage.css';
 
 function FoodTrucks() {
   const [searchTerm, setSearchTerm] = useState('');
-  console.log("Food Truck Data:", foodTruckData)
+  const { cuisine } = useParams();
 
   const filteredTrucks = foodTruckData.filter((truck) => {
     if (Array.isArray(truck.cuisineType)) {
-      return truck.cuisineType.some((cuisine) =>
-        cuisine.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+      let cuisineMatch = true;
+      let searchMatch = true;
+
+      // Filter by cuisine if cuisine parameter is present
+      if (cuisine) {
+        cuisineMatch = truck.cuisineType.some((c) =>
+          c.toLowerCase() === cuisine.toLowerCase()
+        );
+      }
+
+      // Filter by searchTerm if searchTerm is present
+      if (searchTerm) {
+        searchMatch = truck.cuisineType.some((c) =>
+          c.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+
+      return cuisineMatch && searchMatch;
     }
     return false;
   });
-
-  const rows = [];
-  for (let i = 0; i < 16 && i < filteredTrucks.length; i += 4) {
-    const row = filteredTrucks.slice(i, i + 4);
-    rows.push(row);
-  }
 
   return (
     <Layout>
@@ -38,45 +47,20 @@ function FoodTrucks() {
           <button>Search</button>
         </div>
         <div className="food-truck-grid">
-          {rows.slice(0, 2).map((row, rowIndex) => (
-            <div key={rowIndex} className="food-truck-row">
-              {row.map((truck) => {
-                const imageUrl = FoodTruckImageData[`truck${truck.id}`];
-                console.log("Truck ID:", truck.id);
+          {filteredTrucks.map((truck) => {
+            const imageUrl = FoodTruckImageData[`truck${truck.id}`];
 
-                return (
-                  <FoodTruckCard
-                    key={truck.id}
-                    truck={{ ...truck, imageUrl }}
-                  >
-                    <Link to={`/food-truck-details/${truck.id}`}>
-                      <button className="explore-button">EXPLORE</button>
-                    </Link>
-                  </FoodTruckCard>
-                );
-              })}
-            </div>
-          ))}
-        </div>
-        <div className="food-truck-grid">
-          {rows.slice(2, 4).map((row, rowIndex) => (
-            <div key={rowIndex} className="food-truck-row">
-              {row.map((truck) => {
-                const imageUrl = FoodTruckImageData[`truck${truck.id}`];
-
-                return (
-                  <FoodTruckCard
-                    key={truck.id}
-                    truck={{ ...truck, imageUrl }}
-                  >
-                    <Link to={`/food-truck-details/${truck.id}`}>
-                      <button className="explore-button">EXPLORE</button>
-                    </Link>
-                  </FoodTruckCard>
-                );
-              })}
-            </div>
-          ))}
+            return (
+              <FoodTruckCard
+                key={truck.id}
+                truck={{ ...truck, imageUrl }}
+              >
+                <Link to={`/food-truck-details/${truck.id}`}>
+                  <button className="explore-button">EXPLORE</button>
+                </Link>
+              </FoodTruckCard>
+            );
+          })}
         </div>
       </div>
     </Layout>

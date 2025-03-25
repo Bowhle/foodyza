@@ -26,22 +26,19 @@
 }
 
 .food-truck-grid {
-  display: flex;
-  grid-template-columns: 1fr;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
   gap: 20px;
   justify-content: center;
 }
 
 .food-truck-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  display: contents; /* Allow grid items to span across rows */
 }
 
 @media (max-width: 768px) {
-  .food-truck-row {
-    grid-template-columns: 1fr;
+  .food-truck-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
   }
 }
 

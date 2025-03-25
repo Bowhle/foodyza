@@ -32,7 +32,17 @@
 }
 
 .food-truck-details .menu-card button {
+  background-color: #062844;
+  width: 100%;
+  color: #fff;
+  padding: 5px 40px;
+  border-radius: 5px;
+  cursor: pointer;
   margin-top: 10px;
+}
+
+.food-truck-details .menu-card button:hover {
+  opacity: 0.8;
 }
 
 .food-truck-details header {

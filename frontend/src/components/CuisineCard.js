@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './CuisineCard.css';
 import StarRating from './StarRating';
 
@@ -9,10 +10,9 @@ const CuisineCard = ({ cuisine }) => {
       <h3>{cuisine.name}</h3>
       <p>Rating: {cuisine.rating}</p>
       <StarRating rating={cuisine.rating} />
-      <button
-      className="explore-button">
-      EXPLORE TRUCKS
-      </button>
+      <Link to={`/foodtrucks?cuisine=${cuisine.name}`}>
+        <button className="explore-button">EXPLORE TRUCKS</button>
+      </Link>
     </div>
   );
 };
