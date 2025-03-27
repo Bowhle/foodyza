@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import './FeaturedTrucks.css';
 import StarRating from './StarRating';
 import kwamamzoImage from '../assets/kwamamzo.gif';
@@ -8,28 +9,28 @@ const FeaturedTrucks = () => {
   const featuredTrucks = [
     {
       id: 1,
-      name: 'KwaMamzo',
+      name: 'Braai on Wheels',
       image: kwamamzoImage,
       cuisine: 'Kasi style kota, Chips, Fish & Chips',
       rating: 4.1,
     },
     {
       id: 2,
-      name: 'Kumbis Grill',
+      name: 'Tselanes Kitchen',
       image: kcgrillImage,
       cuisine: 'African, Shisa Nyama, Vegetables',
       rating: 4.8,
     },
     {
       id: 3,
-      name: 'Sehles Kitchen',
+      name: 'Hangry Chef',
       image: kcgrillImage, // Replace image
       cuisine: 'African, Chips, Light Meals, Comfort Food',
       rating: 5.0,
     },
     {
       id: 4,
-      name: 'Franks Grill',
+      name: 'Sams Waffles',
       image: kcgrillImage, // Replace image
       cuisine: 'African, Chips, Light Meals, Comfort Food',
       rating: 5.0,
@@ -47,9 +48,9 @@ const FeaturedTrucks = () => {
             <p>Cuisine: {truck.cuisine}</p>
             <p>Rating: {truck.rating}</p>
             <StarRating rating={truck.rating} />
-            <button className="explore-button">
-            EXPLORE
-            </button>
+            <Link to={`/food-truck-details/${truck.id}`} className="explore-button">
+              EXPLORE
+            </Link>
           </div>
         ))}
       </div>

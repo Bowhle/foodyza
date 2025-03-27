@@ -14,26 +14,39 @@
 
 .truck-card {
   border: 0px solid #ddd;
+  flex-direction: column;
   padding: 20px;
   border-radius: 8px;
+  display: flex; /* Add this line to make it a flex container */
+  align-items: center; /* Add this line to center items horizontally */
+  text-align: center; /* Add this line to center text */
 }
 
 .explore-button {
-    background-color: #062844;
-    color: #fff;
-    padding: 10px 60px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
+  background-color: #062844;
+  color: #fff;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  text-decoration: none; /* Ensure this is applied */
+  width: 100%; /* Add this to make it full width */
 }
 
 .explore-button:hover {
-    background-color: #03172F;
+  background-color: #03172F;
 }
 
 .truck-card img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+/* Adjust StarRating container to take full width */
+.StarRating {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

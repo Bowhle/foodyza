@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import CheckoutForm from '../Checkout-Form/CheckoutForm';
 import './Cart.css';
 
 const Cart = () => {
@@ -14,7 +13,15 @@ const Cart = () => {
   }, []);
 
   const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + parseFloat(item.price.replace('R', '').replace('$', '')) * item.quantity, 0).toFixed(2);
+    return cartItems.reduce((total, item) => {
+      const price = parseFloat(item.price.replace('R', '')) || 0;
+      return total + price * item.quantity;
+    }, 0).toFixed(2);
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+    localStorage.removeItem('cart');
   };
 
   return (
@@ -39,6 +46,9 @@ const Cart = () => {
           <div className="cart-total">
             Total: R{calculateTotal()}
           </div>
+          <button className="clear-cart-button" onClick={clearCart}>
+            CLEAR CART
+          </button>
         </>
       )}
       <Link to="/checkout-form" className="checkout-button">

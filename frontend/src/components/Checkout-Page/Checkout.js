@@ -12,7 +12,7 @@ const Checkout = () => {
   }, []);
 
   const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + parseFloat(item.price.replace('R', '').replace('$', '')) * item.quantity, 0).toFixed(2);
+    return cartItems.reduce((total, item) => total + parseFloat(item.price.replace('R', '').replace('R', '')) * item.quantity, 0).toFixed(2);
   };
 
   return (

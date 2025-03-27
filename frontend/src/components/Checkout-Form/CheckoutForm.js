@@ -47,7 +47,7 @@ const CheckoutForm = () => {
     e.preventDefault();
     console.log('Form data:', formData);
     console.log('Cart items:', cartItems);
-    navigate('/user-login-signup'); // Navigate to signup/login page
+    navigate('/user-login-signup');
   };
 
   return (
@@ -197,7 +197,7 @@ const CheckoutForm = () => {
                 <div className="cart-total">Total: R{calculateTotal()}</div>
               </>
             )}
-            <button type="submit" className="place-order-button">
+            <button className="place-order-button" onClick={handleSubmit}>
               PLACE ORDER
             </button>
           </div>
