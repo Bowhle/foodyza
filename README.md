@@ -43,4 +43,5 @@ Foodyza aims to make it easy for busy professionals to quickly find lunch option
 * **Database:**
     * Type: MySQL
 
-![Foodyza](https://github.com/user-attachments/assets/0a7a94da-2879-42da-92ba-1e63f785e325)
+
+![Foodyza](https://github.com/user-attachments/assets/6c8dc7bc-c5f8-4842-b718-b53680049bf2)
