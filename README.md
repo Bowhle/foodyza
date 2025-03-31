@@ -25,8 +25,8 @@ Foodyza aims to make it easy for busy professionals to quickly find lunch option
     * Languages: JavaScript
     * Tools: npm
 * **Backend:**
-    * Language: Node.js
-    * Framework: Express.js
+    * Language: Python
+    * Framework: Flask
 * **Database:**
-    * Type: PostgreSQL
+    * Type: MySQL
 
