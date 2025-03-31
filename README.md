@@ -47,5 +47,9 @@ Foodyza aims to make it easy for busy professionals to quickly find lunch option
 #Foodyza Snapshot
 =======
 
+<<<<<<< HEAD
 ![Foodyza](https://github.com/user-attachments/assets/6c8dc7bc-c5f8-4842-b718-b53680049bf2)
 >>>>>>> 64fe426d7e13e90f0b402a6aa5145b7a61acf744
+=======
+
+>>>>>>> a951011b7fa0a4433e88f5606be95426bdc8e729
