@@ -3,15 +3,15 @@
 Welcome to Foodyza, an innovative web application designed to connect users with food trucks in their area. Whether you're a busy professional, a budget-conscious student, or a food enthusiast, Foodyza has something to offer everyone. Our goal is to simplify the process of finding delicious and affordable meals from food trucks around you.
 
 
-#Deployed Site
+## Deployed Site
 ###############
 
-#Project Blog
+## Project Blog
 
 * Throughout the development of Foodyza, our team focused on creating a user-friendly interface and robust backend to ensure a seamless experience for our users. 
 Below, we outline the key features and technology stack that make Foodyza a standout application.
 
-#Authors Linkedin
+## Authors Linkedin
 
 * Samantha Bowhle Mkhwanazi - https://www.linkedin.com/in/samantha-m-b66b5153/
 * Kgotso Mphuthi - https://www.linkedin.com/in/kgotso-mphuthi-a1022bba
