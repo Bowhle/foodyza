@@ -51,3 +51,7 @@ Below, we outline the key features and technology stack that make Foodyza a stan
 Foodyza aims to revolutionize the way people discover and enjoy food trucks. By providing an easy-to-use platform with comprehensive features, we hope to make the food truck dining experience more accessible and enjoyable for everyone. We invite you to explore Foodyza and discover the diverse culinary offerings in your area.
 
 Thank you for following our journey, and we look forward to bringing you more exciting updates in the future!
+
+
+
+![Foodyza](https://github.com/user-attachments/assets/e112cc22-3216-4810-aac0-3e8c99f52323)
