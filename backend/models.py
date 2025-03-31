@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
-import datetime
+# ... other imports ...
+import datetime # Make sure you have this import
 
 db = SQLAlchemy()
 
@@ -25,9 +24,23 @@ class Restaurant(db.Model):
     address = db.Column(db.String(200), nullable=False)
     phone = db.Column(db.String(20), nullable=False)
     menus = db.relationship('Menu', backref='restaurant', lazy=True)
+    cuisines = db.relationship('Cuisine', secondary='restaurant_cuisine', backref='restaurants', lazy='subquery')  # Added relationship
 
     def __repr__(self):
         return f'<Restaurant {self.name}>'
+
+class Cuisine(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+
+    def __repr__(self):
+        return f'<Cuisine {self.name}>'
+
+# Association table for the many-to-many relationship
+restaurant_cuisine = db.Table('restaurant_cuisine',
+    db.Column('restaurant_id', db.Integer, db.ForeignKey('restaurant.id'), primary_key=True),
+    db.Column('cuisine_id', db.Integer, db.ForeignKey('cuisine.id'), primary_key=True)
+)
 
 class Menu(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -35,9 +48,6 @@ class Menu(db.Model):
     description = db.Column(db.Text)
     restaurant_id = db.Column(db.Integer, db.ForeignKey('restaurant.id'), nullable=False)
     items = db.relationship('MenuItem', backref='menu', lazy=True)
-
-    def __repr__(self):
-        return f'<Menu {self.name}>'
 
 class MenuItem(db.Model):
     id = db.Column(db.Integer, primary_key=True)
