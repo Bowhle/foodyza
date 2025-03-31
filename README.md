@@ -2,6 +2,17 @@
 A web application designed to connect users with food trucks in their area. 
 Foodyza aims to make it easy for busy professionals to quickly find lunch options, for budget-conscious students to discover affordable meals and for everyone to explore the diverse culinary offerings of food trucks.
 
+Deployed Site
+###############
+
+Project Blog
+###############
+
+Authors Linkedin
+Samantha Bowhle Mkhwanazi - https://www.linkedin.com/in/samantha-m-b66b5153/
+Kgotso Mphuthi - https://www.linkedin.com/in/kgotso-mphuthi-a1022bba
+
+
 ## User Stories
 
 * As a busy professional, I want to quickly find food trucks near my location so that I can buy lunch without wasting time walking to a distant mall.
