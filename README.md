@@ -42,3 +42,4 @@ Foodyza aims to make it easy for busy professionals to quickly find lunch option
 * **Database:**
     * Type: MySQL
 
+#Foodyza Snapshot
