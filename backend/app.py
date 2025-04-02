@@ -1,5 +1,7 @@
+import os
 from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
 from functools import wraps
@@ -7,11 +9,12 @@ from functools import wraps
 app = Flask(__name__)
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqldb://foodyza_user:your_database_password@your_cloud_sql_private_ip:3306/your_database_name'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+mysqldb://your_flask_user:{os.environ.get("foodyza@2024")}@192.168.1.100:3306/foodyza_database'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'your_secret_key'  # Change this to a strong, random key
 
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 #
 # Define your models here
@@ -19,7 +22,7 @@ db = SQLAlchemy(app)
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
-    email = db.Column(db.String(120), unique=True, unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
 
     def __repr__(self):
