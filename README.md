@@ -80,7 +80,7 @@ This blog post provides a comprehensive overview of your project, highlighting i
 
 ## Usage
 
-1.  Open the application in your web browser.
+1.  Open the application in your web browser. (How)...
 2.  Use the search bar to find food trucks near you.
 3.  Browse menus and view details for individual food trucks.
 4.  (Future) Create an account to save your favourite food trucks and place orders.
