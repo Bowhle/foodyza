@@ -87,20 +87,6 @@ This blog post provides a comprehensive overview of your project, highlighting i
 3.  Browse menus and view details for individual food trucks.
 4.  (Future) Create an account to save your favourite food trucks and place orders.
 
-
-## Technology Stack
-
-* **Frontend:**
-    * Framework: React
-    * Languages: JavaScript
-    * Tools: npm
-* **Backend:**
-
-    * Language: Python
-    * Framework: Flask
-* **Database:**
-    * Type: MySQl
-
 ## Conclusion
 
 Foodyza aims to revolutionize the way people discover and enjoy food trucks. By providing an easy-to-use platform with comprehensive features, we hope to make the food truck dining experience more accessible and enjoyable for everyone. We invite you to explore Foodyza and discover the diverse culinary offerings in your area.
