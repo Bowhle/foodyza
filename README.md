@@ -22,12 +22,12 @@ Unlike some complex food delivery platforms, Foodyza focuses on simplicity and d
 
 * To bring Foodyza to life, we employed a modern technology stack designed for both scalability and maintainability:
 
-# Frontend:
+# Frontend
 * HTML, CSS, and JavaScript formed the foundation of our user interface, ensuring a responsive and engaging experience.
-#  Backend:
+#  Backend
 * Flask (Python) served as our robust and flexible backend framework, handling API requests and business logic.
 * MySQL provided a reliable database solution for storing restaurant and order information.
-# Deployment:
+# Deployment
 We navigated the challenges of deploying our application, learning valuable lessons about environment configuration and network connectivity.
 
 The development process was structured around Agile principles, with a strong emphasis on user stories. For example:
