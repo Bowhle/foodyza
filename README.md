@@ -24,6 +24,9 @@ Unlike some complex food delivery platforms, Foodyza focuses on simplicity and d
 
 ## Frontend
 * HTML, CSS, and JavaScript formed the foundation of our user interface, ensuring a responsive and engaging experience.
+* Framework: React
+* Languages: JavaScript
+* Tools: npm
 ##  Backend
 * Flask (Python) served as our robust and flexible backend framework, handling API requests and business logic.
 * MySQL provided a reliable database solution for storing restaurant and order information.
@@ -96,7 +99,7 @@ This blog post provides a comprehensive overview of your project, highlighting i
     * Language: Python
     * Framework: Flask
 * **Database:**
-    * Type: MySQL
+    * Type: MySQl
 
 ## Conclusion
 
